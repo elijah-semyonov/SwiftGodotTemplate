@@ -7,8 +7,6 @@ const MARGIN = 16
 @onready var log_label := Label.new()
 @onready var log := RichTextLabel.new()
 
-const TARGET_DIR = "res://addon/swift_godot_extension"
-
 func _ready() -> void:
 	size_flags_vertical = Control.SIZE_EXPAND_FILL
 	set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -43,6 +41,20 @@ func recompile_swift() -> void:
 		return
 	var path = ProjectSettings.globalize_path("res://swift_godot_game")
 	var target_dir = ProjectSettings.globalize_path("res://addons/swift_godot_extension/bin")
+	if not DirAccess.dir_exists_absolute(target_dir):
+		var err = DirAccess.make_dir_recursive_absolute(target_dir)
+		if err != OK:
+			append_log("Error creating directory '" + target_dir + "'")
+			return
+	
+	var gdignore_path: String = target_dir.path_join(".gdignore")
+	var file = FileAccess.open(gdignore_path, FileAccess.WRITE)
+	if file == null:
+		var open_error = FileAccess.get_open_error()
+		append_log("Error creating/opening '" + gdignore_path + "'")
+		return
+	else:
+		file.close()
 	
 	var build_args = ["build", "--package-path", path]	
 	var output = []
