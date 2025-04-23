@@ -2,10 +2,11 @@
 
 This is a ready to use SwiftGodot project with an integrated SPM project and a small plugin to make your life a bit more convenient
 
-### Manully tested on
-Swift toolchain from Xcode Version 16.3 (16E140)
-MacBook with a M-family processor
-Godot v4.4.1.stable.official [49a5bc7b6]
+### Manully tested and supported on
+- macOS
+    - Swift toolchain from Xcode Version 16.3 (16E140)
+    - MacBook with a M-family processor
+    - Godot v4.4.1.stable.official [49a5bc7b6]
 
 ### How to use it
 1. Clone this repository
