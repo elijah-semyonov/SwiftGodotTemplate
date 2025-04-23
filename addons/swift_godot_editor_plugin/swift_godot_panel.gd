@@ -83,6 +83,7 @@ func recompile_swift() -> void:
 		var time_passed = (Time.get_ticks_msec() - start_time) / 1000
 		status.text = "Compiling %s %s s " % [progress_markers[i], time_passed]
 		i = (i + 1) % progress_markers.size()
-	status.text = "Done"	
-	await get_tree().create_timer(3.0).timeout	
+	append_log("Done! Restarting editor.")
+	status.text = "Done"
+	await get_tree().create_timer(1.0).timeout
 	EditorInterface.restart_editor(false)

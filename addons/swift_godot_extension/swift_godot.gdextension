@@ -5,6 +5,10 @@ compatibility_minimum = 4.4
 
 [libraries]
 macos.debug = "res://addons/swift_godot_extension/bin/arm64-apple-macosx/debug/libSwiftGodotGame.dylib"
+windows.x86_64.debug = "res://addons/swift_godot_extension/bin/x86_64-unknown-windows-msvc/debug/SwiftGodotGame.dll"
+windows.x86_64.release = "res://addons/swift_godot_extension/bin/x86_64-unknown-windows-msvc/debug/SwiftGodotGame.dll"
 
 [dependencies]
-macos.release = "res://addons/swift_godot_extension/bin/arm64-apple-macosx/debug/libSwiftGodot.dylib"
+macos.debug = "res://addons/swift_godot_extension/bin/arm64-apple-macosx/debug/libSwiftGodot.dylib"
+windows.x86_64.debug = "res://addons/swift_godot_extension/bin/x86_64-unknown-windows-msvc/debug/SwiftGodot.dll"
+windows.x86_64.release = "res://addons/swift_godot_extension/bin/x86_64-unknown-windows-msvc/debug/SwiftGodot.dll"
