@@ -51,6 +51,7 @@ func recompile_swift() -> void:
 		if err != OK:
 			append_log("Error creating directory '" + target_dir + "'")
 			return
+		append_log("Building from the scratch. Can take some time. Consequent builds will be much faster.")
 		
 	var gdignore_path: String = target_dir.path_join(".gdignore")
 	append_log("Writing %s" % gdignore_path)
