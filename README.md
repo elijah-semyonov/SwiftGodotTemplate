@@ -30,4 +30,5 @@ Godot Editor plugin sitting in `res://addons/swift_godot_editor_plugin` simply r
 ### Where is SwiftGodot project?
 Swift Package Manager (SPM) project dependent on `SwiftGodot` sits in `swift_godot_game` directory. It's invisible to Godot project due to `.gdignore` file in there. You can work with it in any IDE that can work with SPM and use the Editor plugin functionality to rebuild it.
 
-
+### Demo
+[![Demo video](https://img.youtube.com/vi/f1JM4jtfrdY/0.jpg)](https://www.youtube.com/watch?v=f1JM4jtfrdY)
