@@ -1,37 +1,16 @@
 @tool
-extends VBoxContainer
+extends MarginContainer
 
 const MARGIN = 16
 
-@onready var recompile_button := Button.new()
-@onready var log_label := Label.new()
-@onready var log := RichTextLabel.new()
-@onready var status := Label.new()
+@onready var recompile_button := $VBoxContainer/RecompileButton
+@onready var log_label := $VBoxContainer/LogLabel
+@onready var log := $VBoxContainer/Log
+@onready var status := $VBoxContainer/StatusLabel
 
-func _ready() -> void:
-	size_flags_vertical = Control.SIZE_EXPAND_FILL
-	set_anchors_preset(Control.PRESET_FULL_RECT)
-	
-	offset_bottom = MARGIN
-	offset_top = MARGIN
-	offset_left = MARGIN
-	offset_right = MARGIN
-		
-	recompile_button.text = "Recompile Swift"
-	recompile_button.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
-	add_child(recompile_button)
+func _ready() -> void:	
 	recompile_button.pressed.connect(recompile_swift)
-		
-	status.text = "Awaiting command"
-	add_child(status)
-	
-	log_label.text = "Log:"
-	add_child(log_label)
-		
-	log.scroll_following = true
-	log.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	log.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	add_child(log)
+	status.text = "Awaiting command"	
 
 func append_log(string: String) -> void:
 	log.add_text(string + "\n")

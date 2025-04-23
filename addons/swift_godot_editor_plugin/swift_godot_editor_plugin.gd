@@ -1,12 +1,12 @@
 @tool
 extends EditorPlugin
 
-const MainPanel = preload("res://addons/swift_godot_editor_plugin/swift_godot_panel.gd")
+const MainPanel = preload("res://addons/swift_godot_editor_plugin/swift_godot_plugin_panel.tscn")
 
 var main_panel_instance
 
 func _enter_tree() -> void:
-	main_panel_instance = MainPanel.new()
+	main_panel_instance = MainPanel.instantiate()
 	EditorInterface.get_editor_main_screen().add_child(main_panel_instance)
 	_make_visible(false)
 
