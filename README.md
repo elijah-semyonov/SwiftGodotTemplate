@@ -22,7 +22,7 @@ Wait.
 
 The script will build the project and copy the `dylib`s to location set by `swift_godot.gdextension`.
 
-When build is finished Godot editor will save any unsaved files and relaunch.
+When build is finished Godot editor will reopen the current project.
 
 ### How does it work
 Godot Editor plugin sitting in `res://addons/swift_godot_editor_plugin` simply runs `swift build` command using [OS.create_process](https://docs.godotengine.org/en/stable/classes/class_os.html#class-os-method-create-process) with `--build-path` set to folder where `swift_godot.gdextension` expects it
