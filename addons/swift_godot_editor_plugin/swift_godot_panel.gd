@@ -84,8 +84,5 @@ func recompile_swift() -> void:
 		i = (i + 1) % progress_markers.size()
 	status.text = "Done"
 	append_log("Restarting editor in 3 seconds")
-	await get_tree().create_timer(3.0).timeout
-	var project_path = ProjectSettings.globalize_path("res://")
-	var arguments = ["--path", project_path, "--editor"]
-	var editor_exec_path = OS.get_executable_path()
+	await get_tree().create_timer(3.0).timeout	
 	EditorInterface.restart_editor(true)
