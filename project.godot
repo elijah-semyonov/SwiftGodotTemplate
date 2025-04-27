@@ -12,7 +12,7 @@ config_version=5
 
 config/name="SwiftGodot Game"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://3ch2grhh3o6u"
+config/icon="uid://n2nw7u85thul"
 
 [editor_plugins]
 
