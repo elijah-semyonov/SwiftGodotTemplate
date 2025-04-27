@@ -2,7 +2,7 @@
 
 This is a ready to use SwiftGodot project with an integrated SPM project and a small plugin to make your life a bit more convenient.
 
-It provides a Editor tab with a button that allows you to rebuild shupped SwiftGodot SPM project in one tap and reload the editor after.
+It provides a Editor tab with a button that allows you to rebuild shipped SwiftGodot SPM project in one tap and reload the editor after.
 
 ### Manully tested and supported on
 Godot v4.4.1.stable.official [49a5bc7b6]
