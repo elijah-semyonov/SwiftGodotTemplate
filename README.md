@@ -27,7 +27,7 @@ The script will build the project and copy the built libraries to location set b
 
 When build is finished Godot editor will reopen the current project.
 
-### Windows only
+### If you have Windows
 After the first build on Windows you need to copy some Swift runtime `dll`s into `res://addons/swift_godot_extension/bin/x86_64-unknown-windows-msvc/debug/` and reload project.
 
 They are located nearby the Swift toolchain location. Use PowerShell to find it
