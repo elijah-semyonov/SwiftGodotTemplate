@@ -9,8 +9,7 @@ Godot v4.4.1.stable.official [49a5bc7b6]
 
 - macOS(M-family CPU)
     - Swift toolchain from Xcode Version 16.3 (16E140)
-- Windows (x86_64)
-    - after https://github.com/migueldeicaza/SwiftGodot/pull/689 is merged, or set dependency to `.package(url: "https://github.com/elijah-semyonov/SwiftGodot", branch: "typed-array")` in `swift_godot_game/Package.swift`
+- Windows (x86_64)    
     - [Swift 6.1](https://www.swift.org/install/windows/)
 
 ### How to use it
